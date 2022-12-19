@@ -41,7 +41,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         val ai: ApplicationInfo = applicationContext.packageManager
             .getApplicationInfo(applicationContext.packageName, PackageManager.GET_META_DATA)
-        val value = ai.metaData["com.google.android.geo.API_KEY"]
+        val value = ai.metaData[R.string.api_key.toString()]
         val apiKey = value.toString()
 
         // Initializing the Places API with the help of our API_KEY
